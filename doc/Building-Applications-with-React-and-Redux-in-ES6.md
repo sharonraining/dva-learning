@@ -209,4 +209,4 @@ Helper library:
 2. Enzyme
     - React Test Utils
     - jSDOM(In-memory DOM)
-    - Cheerio(Fast Jquery style selectors) 
+    - Cheerio(Fast Jquery style selectors)
