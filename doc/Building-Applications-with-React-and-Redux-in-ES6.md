@@ -1,6 +1,6 @@
-# notebook
+# Building-Applications-with-React-and-Redux-in-ES6
 
-## Intro
+## Introduce
 
 ### why redux(comprehension)
 
@@ -210,9 +210,3 @@ Helper library:
     - React Test Utils
     - jSDOM(In-memory DOM)
     - Cheerio(Fast Jquery style selectors) 
-
-To do list:
-
-1. redux and flux
-2. react router update
-3. react and redux dev tool

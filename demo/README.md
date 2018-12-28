@@ -22,3 +22,7 @@ $ npm start
 ```
 
 ## Detail
+
+计数器：http://localhost:8000/#/count  
+用户管理：http://localhost:8000/#/authors  
+课程管理：http://localhost:8000/#/courses  
