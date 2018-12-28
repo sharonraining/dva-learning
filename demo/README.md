@@ -21,7 +21,7 @@ Start server
 $ npm start
 ```
 
-## Detail
+## Details
 
 计数器：http://localhost:8000/#/count  
 用户管理：http://localhost:8000/#/authors  
