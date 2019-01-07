@@ -17,6 +17,14 @@
 
 >> 结论1：光使用react本身是无法编写大型复杂的应用的；redux的适用场景是：多交互、多数据源。
 
+#### when use redux(An example)
+
+|Stage| 需求 | 是否需要|
+|----|--------------|----------|
+|1| 父组件把自身状态作为属性传递给子组件，单向数据流 | 不需要|
+|2| 非父子组件需要共享一些状态，状态提升 |可以不需要|
+|3| 随着组件和功能的增多，程序流程变更加复杂| 开始需要 |
+
 #### 流行的react实践方案
 
 - 数据流方案： redux
@@ -112,6 +120,16 @@ const App = () => (
 
 ## What Dva
 
+### dva & umi & antd
+
+umi(工具+路由) + dva(数据) + antd（视图）
+
+- dva: 数据流解决方案。
+- umi: 前端底层框架开发方案。
+- antd: UI库，前端中台。
+
+dva
+
 ### dva basic
 
 - Model 可认为是领域模型，用于把数据相关的逻辑聚合到一起
@@ -202,7 +220,7 @@ app.start(); //启动dva
 
 ### Use in Bingads
 
-1. dva core是一个独立的数据解决方案，广泛应用于阿里内部（600+项目）
+1. dva core是一个独立的数据解决方案，广泛应用于阿里内部
    bundle size: 24.4kb
    download time: 488ms(50kb/s)
 2. 目前CampaignUI对redux的使用情况：
@@ -212,7 +230,9 @@ app.start(); //启动dva
 3. 个人观点：
    - 目前dva在Bingads中暂时用不起来，因为暂时没有这样的需求，但dva对于一个有复杂数据流的start up项目确实是个很不错的选择，我们可以在开发新工具的时候使用,用起来体验感也方便
    - 对于Bingads中的新的feature，多数据流且使用到redux的时候可以考虑使用dva-core，实践效果优于redux
-   - 但是对于new ui，new ui都是基于react，我们的整个网站可以考虑使用dva，或则借鉴dva的思想，搭建自己的底层框架，dva对model进行了封装且兼具扩展性，优化了大家的开发体验。
+   - 对于new ui，new ui都是基于react，如果我们将来会将数据和视图分离，使用redux，可以考虑使用dva，dva对model进行了封装且兼具扩展性，优化了大家的开发体验。
+
+>> 结论5： redux不是必要的，使用redux的场景是：多交互，多数据源。但是如果确定使用了redux，dva-core是个非常更好的选择。
 
 ## 源码解读
 
